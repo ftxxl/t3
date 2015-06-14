@@ -96,6 +96,7 @@ public class Tournament {
 		sidebar.setLayout(gbl_sidebar);
 
 		roundBox = new JComboBox<Round>();
+		roundBox.setToolTipText("Choose round to edit");
 		roundBox.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				Tournament.this.repaint();
@@ -110,6 +111,7 @@ public class Tournament {
 		sidebar.add(roundBox, gbc_roundBox);
 
 		JButton btnAddRound = new JButton("+");
+		btnAddRound.setToolTipText("add Round");
 		btnAddRound.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String s = JOptionPane.showInputDialog("Neue Runde:");
@@ -132,6 +134,7 @@ public class Tournament {
 		sidebar.add(listParticipants, gbc_listParticipants);
 
 		textField = new JTextField();
+		textField.setToolTipText("Enter name of Participant");
 		textField.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Tournament.this.newParticipant(Tournament.this.textField
@@ -155,6 +158,7 @@ public class Tournament {
 		textField.setColumns(10);
 
 		JButton btnAddPart = new JButton("+");
+		btnAddPart.setToolTipText("add participant");
 		btnAddPart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Tournament.this.newParticipant(Tournament.this.textField
@@ -168,6 +172,7 @@ public class Tournament {
 		sidebar.add(btnAddPart, gbc_btnAddPart);
 
 		JButton btnDelPart = new JButton("-");
+		btnDelPart.setToolTipText("remove selected participant");
 		btnDelPart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Tournament.this.killParticipant();
@@ -199,6 +204,7 @@ public class Tournament {
 		panelTables.setLayout(gbl_panelTables);
 
 		JButton btnSitDown = new JButton("Sit down");
+		btnSitDown.setToolTipText("Calculate tables for selected round");
 		btnSitDown.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Tournament.this.sitDown();
@@ -274,6 +280,7 @@ public class Tournament {
 		panelTable.add(listTable, gbc_listTable);
 
 		this.advBox = new JComboBox<Round>();
+		advBox.setToolTipText("choose round to advance");
 		GridBagConstraints gbc_advBox = new GridBagConstraints();
 		gbc_advBox.insets = new Insets(0, 0, 0, 5);
 		gbc_advBox.fill = GridBagConstraints.HORIZONTAL;
@@ -282,6 +289,7 @@ public class Tournament {
 		panelTable.add(advBox, gbc_advBox);
 
 		JButton btnAdvance = new JButton("advance");
+		btnAdvance.setToolTipText("add selected participant to selected round");
 		btnAdvance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Tournament.this.advance();
