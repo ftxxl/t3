@@ -80,7 +80,7 @@ public class Tournament {
 		this.partCount = 0;
 		this.maxPlayer = 5;
 		frmTournamentManager = new JFrame();
-		frmTournamentManager.setTitle("Tournament Manager");
+		frmTournamentManager.setTitle("Tabletop Tournament");
 		frmTournamentManager.setBounds(100, 100, 800, 600);
 		frmTournamentManager.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
