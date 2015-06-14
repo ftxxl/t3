@@ -1,0 +1,23 @@
+<project>
+
+	<target name="compile">
+		<mkdir dir="bin"/>
+		<javac srcdir="src" destdir="bin"/>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="TabletopTournament.jar" basedir="bin">
+			<manifest>
+				<attribute name="Main-Class" value="Tournament"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run" depends="jar">
+		<java jar="TabletopTournament.jar" fork="true"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="bin"/>
+	</target>	
+</project>
