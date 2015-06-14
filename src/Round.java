@@ -10,7 +10,7 @@ public class Round extends Component {
 
 	public Round(int nr) {
 		this.nr = nr;
-		this.topic = "Runde " + nr;
+		this.topic = "Round " + nr;
 		this.tables = new ArrayList<Table>();
 		this.participants = new ArrayList<Participant>();
 	}

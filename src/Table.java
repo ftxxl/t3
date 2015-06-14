@@ -26,7 +26,7 @@ public class Table {
 	
 	public String toString(){
 		StringBuilder build = new StringBuilder();
-		build.append("Tisch "+this.nr+": ");
+		build.append("Table "+this.nr+": ");
 		for(Participant p: this.participants){
 			build.append(p.toString()+", ");
 		}
